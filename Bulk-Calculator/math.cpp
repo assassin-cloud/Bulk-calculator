@@ -46,3 +46,41 @@ double bulkmultiplication(){
         }
     }
 }
+
+double addition(double x, double y){
+    cout << "SOLUTION:" << endl;
+    return x+y;
+}
+
+double bulkaddition(){
+    cout << "How many numbers do you wanna add:" << endl;
+    int size {};
+    cin >> size;
+    if(size<=0){
+        cout << "Invalid Input!" << endl;
+        return 0.0;
+    }
+    else{
+        double* p = new double[size];
+        for(int i=0;i<size;i++){
+            cout << "Input " << i+1 << " number" << endl;
+            cin >> p[i];
+        }
+        if(size==1){
+            cout << "SOLUTION:" << endl;
+            return p[0];
+            delete[] p;
+            p = nullptr;
+        }
+        else{
+            double sum { p[0] };
+            for(int i=1;i<size;i++){
+                sum+=p[i];
+            }
+            cout << "SOLUTION:" << endl;
+            delete[] p;
+            p = nullptr;
+            return sum;
+        }
+    }
+}
