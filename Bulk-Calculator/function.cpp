@@ -18,7 +18,7 @@ void multiplicationsection(){
     cout << "   Multiplier    " << endl;
     cout << "=================" << endl;
     cout << endl;
-    cout << "1. Multiply(Multiply only 2 numbers at a time)" << endl;
+    cout << "1. Multiply(Add only 2 numbers at a time)" << endl;
     cout << "2. Multiply number with PI(one number multiply by PI)" << endl;
     cout << "3. Multiply numbers in bulk" << endl;
     cout << "4. Exit" << endl;
