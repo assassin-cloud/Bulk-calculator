@@ -12,29 +12,86 @@ int main(){
         }
         else{
             if(userinput == 1){
-                cout << "Input 1st number:" << endl;
-                double  numberx {};
-                cin >> numberx;
-                cout << "Input 2nd number:" << endl;
-                double numbery {};
-                cin >> numbery;
-                cout << endl;
-                cout << multiplytwonumbers(numberx, numbery) << endl;
-                goback();
+                while(true){
+                    multiplicationsection();
+                    int multiplieruserinput {};
+                    cin >> multiplieruserinput;
+                    if(cin.fail()){
+                        cinfail();
+                    }
+                    else{
+                        if(multiplieruserinput == 1){
+                            cout << "Input 1st number:" << endl;
+                            double  multipliernumberx {};
+                            cin >> multipliernumberx;
+                            cout << "Input 2nd number:" << endl;
+                            double multipliernumbery {};
+                            cin >> multipliernumbery;
+                            cout << endl;
+                            cout << multiplytwonumbers(multipliernumberx, multipliernumbery) << endl;
+                            goback();
+                        }
+                        else if(multiplieruserinput == 2){
+                            cout << "Input a number" << endl;
+                            double number {};
+                            cin >> number;
+                            cout << multiplywithpi(number) << endl;;
+                            goback();
+                        }
+                        else if(multiplieruserinput == 3){
+                            cout << bulkmultiplication() << endl;
+                            goback();
+                        }
+                        else if(multiplieruserinput == 4){
+                            break;
+                        }
+                        else{
+                            cout << "Invalid Input!" << endl;
+                            goback();
+                        }
+                    }
+                }
             }
             else if(userinput == 2){
-                cout << "Input a number" << endl;
-                double number {};
-                cin >> number;
-                cout << multiplywithpi(number) << endl;;
-                goback();
+                while(true){
+                    additionsection();
+                    int additionuserinput {};
+                    cin >> additionuserinput;
+                    if(cin.fail()){
+                        cinfail();
+                    }
+                    else{
+                        if(additionuserinput == 1){
+                            cout << "Input 1st number: " << endl;
+                            double additionnumberx {};
+                            cin >> additionnumberx;
+                            cout << "Input 2nd number: " << endl;
+                            double additionnumbery {};
+                            cin >> additionnumbery;
+                            cout << endl;
+                            cout << addition(additionnumberx, additionnumbery) << endl;
+                            goback();
+                        }
+                        else if(additionuserinput == 2){
+                            cout << bulkaddition() << endl;
+                            goback();
+                        }
+                        else if(additionuserinput == 3){
+                            break;
+                        }
+                        else{
+                            cout << "Invalid Input!" << endl;
+                            goback();
+                        }
+                    }
+                }
             }
             else if(userinput == 3){
-                cout << bulkmultiplication() << endl;
-                goback();
-            }
-            else if(userinput == 4){
                 break;
+            }
+            else{
+                cout << "Invalid Input!" << endl;
+                goback();
             }
         }
     }
