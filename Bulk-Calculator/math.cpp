@@ -28,9 +28,10 @@ double bulkmultiplication(){
         }
         if(size == 1){
             cout << "SOLUTION" << endl;
-            return p[0];
+            double size1 = p[0];
             delete[] p;
             p = nullptr;
+            return size1;
         }
         else{
             double multiply { p[0] };
@@ -68,9 +69,10 @@ double bulkaddition(){
         }
         if(size==1){
             cout << "SOLUTION:" << endl;
-            return p[0];
+            double size1 = p[0];
             delete[] p;
             p = nullptr;
+            return size1;
         }
         else{
             double sum { p[0] };
