@@ -21,21 +21,14 @@ int main(){
                     }
                     else{
                         if(multiplieruserinput == 1){
-                            cout << "Input 1st number:" << endl;
-                            double  multipliernumberx {};
-                            cin >> multipliernumberx;
-                            cout << "Input 2nd number:" << endl;
-                            double multipliernumbery {};
-                            cin >> multipliernumbery;
-                            cout << endl;
-                            cout << multiplytwonumbers(multipliernumberx, multipliernumbery) << endl;
+                            cout << multiplytwonumbers() << endl;
                             goback();
                         }
                         else if(multiplieruserinput == 2){
                             cout << "Input a number" << endl;
                             double number {};
                             cin >> number;
-                            cout << multiplywithpi(number) << endl;;
+                            cout << multiplywithpi() << endl;
                             goback();
                         }
                         else if(multiplieruserinput == 3){
@@ -62,14 +55,7 @@ int main(){
                     }
                     else{
                         if(additionuserinput == 1){
-                            cout << "Input 1st number: " << endl;
-                            double additionnumberx {};
-                            cin >> additionnumberx;
-                            cout << "Input 2nd number: " << endl;
-                            double additionnumbery {};
-                            cin >> additionnumbery;
-                            cout << endl;
-                            cout << addition(additionnumberx, additionnumbery) << endl;
+                            cout << addition() << endl;
                             goback();
                         }
                         else if(additionuserinput == 2){
@@ -96,13 +82,7 @@ int main(){
                     }
                     else{
                         if(subtractionuserinput == 1){
-                            cout << "Input 1st number:" << endl;
-                            double subtractionnumberx {};
-                            cin >> subtractionnumberx;
-                            cout << "Input 2nd number:" << endl;
-                            double subtractionnumbery {};
-                            cin >> subtractionnumbery;
-                            cout << subtraction(subtractionnumberx,subtractionnumbery) << endl;;
+                            cout << subtraction() << endl;
                             goback();
                         }
                         else if(subtractionuserinput == 2){
@@ -129,19 +109,7 @@ int main(){
                     }
                     else{
                         if(divisonuserinput == 1){
-                            cout << "Enter 1st number:" << endl;
-                            double divisonnumberx {};
-                            cin >> divisonnumberx;
-                            cout << "Enter 2nd number:" << endl;
-                            double divisonnumbery {};
-                            cin >> divisonnumbery;
-                            if(divisonnumbery == 0){
-                                cout << "Can't divide by zero!" << endl;
-                            }
-                            else{
-                                cout << division(divisonnumberx,divisonnumbery) << endl;
-                                goback();
-                            }
+                            cout << division() << endl;
                         }
                         else if(divisonuserinput == 2){
                             cout << bulkdivision() << endl;
