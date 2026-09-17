@@ -188,7 +188,15 @@ double bulkdivision(){
         else{
             double output { p[0] };
             for(int i=1;i<size;i++){
-                output /= p[i];
+                if(p[i] == 0){
+                    cout << "Can't divide by zero!" << endl;
+                    delete[] p;
+                    p = nullptr;
+                    return 0.0;
+                }
+                else{
+                    output /= p[i];
+                }
             }
             delete[] p;
             p = nullptr;
