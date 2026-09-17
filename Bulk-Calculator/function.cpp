@@ -9,7 +9,8 @@ void welcome(){
     cout << "1. Multiplier" << endl;
     cout << "2. Addition" << endl;
     cout << "3. Subtraction" << endl;
-    cout << "4. Exit" << endl;
+    cout << "4. Division" << endl;
+    cout << "5. Exit" << endl;
     cout << endl;
     cout << "Input: " << endl;
 }
@@ -46,6 +47,18 @@ void subtractionsection(){
     cout << endl;
     cout << "1. Subtraction(Subtract only 2 numbers at a time)" << endl;
     cout << "2. Subtract numbers in bulk" << endl;
+    cout << "3. Exit" << endl;
+    cout << endl;
+    cout << "Input: " << endl;
+}
+
+void divisonsection(){
+    cout << "===============" << endl;
+    cout << "   Division    " << endl;
+    cout << "===============" << endl;
+    cout << endl;
+    cout << "1. Divison(Divide only 2 numbers at a time)" << endl;
+    cout << "2. Divide numbers in bulk" << endl;
     cout << "3. Exit" << endl;
     cout << endl;
     cout << "Input: " << endl;
