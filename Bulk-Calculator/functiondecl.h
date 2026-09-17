@@ -5,6 +5,7 @@ void welcome();
 void multiplicationsection();
 void additionsection();
 void subtractionsection();
+void divisonsection();
 void goback();
 void cinfail();
 
@@ -16,4 +17,6 @@ double addition(double x, double y);
 double bulkaddition();
 double subtraction(double x, double y);
 double bulksubtraction();
+double division(double x, double y);
+double bulkdivision();
 #endif
