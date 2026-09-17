@@ -120,6 +120,44 @@ int main(){
                 }
             }
             else if(userinput == 4){
+                while(true){
+                    divisonsection();
+                    int divisonuserinput {};
+                    cin >> divisonuserinput;
+                    if(cin.fail()){
+                        cinfail();
+                    }
+                    else{
+                        if(divisonuserinput == 1){
+                            cout << "Enter 1st number:" << endl;
+                            double divisonnumberx {};
+                            cin >> divisonnumberx;
+                            cout << "Enter 2nd number:" << endl;
+                            double divisonnumbery {};
+                            cin >> divisonnumbery;
+                            if(divisonnumbery == 0){
+                                cout << "Can't divide by zero!" << endl;
+                            }
+                            else{
+                                cout << division(divisonnumberx,divisonnumbery) << endl;
+                                goback();
+                            }
+                        }
+                        else if(divisonuserinput == 2){
+                            cout << bulkdivision() << endl;
+                            goback();
+                        }
+                        else if(divisonuserinput == 3){
+                            break;
+                        }
+                        else{
+                            cout << "Invalid Input!" << endl;
+                            goback();
+                        }
+                    }
+                }
+            }
+            else if(userinput == 5){
                 break;
             }
             else{
