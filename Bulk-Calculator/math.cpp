@@ -1,15 +1,25 @@
 #include<iostream>
 using namespace std;
 
-double multiplytwonumbers(double x, double y){
+double multiplytwonumbers(){
+    cout << "Input 1st number:" << endl;
+    double x {};
+    cin >> x;
+    cout << "Input 2nd number:" << endl;
+    double y {};
+    cin >> y;
+    cout << endl;
     cout << "SOLUTION:" << endl;
     return x*y;
 }
 
-double multiplywithpi(double x){
+double multiplywithpi(){
+    cout << "Input a number" << endl;
+    double number {};
+    cin >> number;
     double pi {3.141592653589793};
     cout << "SOLUTION:" << endl;
-    return x*pi;
+    return number*pi;
 }
 
 double bulkmultiplication(){
@@ -48,7 +58,14 @@ double bulkmultiplication(){
     }
 }
 
-double addition(double x, double y){
+double addition(){
+    cout << "Input 1st number:" << endl;
+    double x {};
+    cin >> x;
+    cout << "Input 2nd number:" << endl;
+    double y {};
+    cin >> y;
+    cout << endl;
     cout << "SOLUTION:" << endl;
     return x+y;
 }
@@ -87,7 +104,14 @@ double bulkaddition(){
     }
 }
 
-double subtraction(double x, double y){
+double subtraction(){
+    cout << "Input 1st number:" << endl;
+    double x {};
+    cin >> x;
+    cout << "Input 2nd number:" << endl;
+    double y {};
+    cin >> y;
+    cout << endl;
     cout << "SOLUTION:" << endl;
     return x-y;
 }
@@ -125,9 +149,20 @@ double bulksubtraction(){
     }
 }
 
-double division(double x, double y){
-    cout << "SOLUTION:" << endl;
-    return x/y;
+double division(){
+    cout << "Enter 1st number:" << endl;
+    double x {};
+    cin >> x;
+    cout << "Enter 2nd number:" << endl;
+    double y {};
+    cin >> y;
+    if(y == 0){
+        cout << "Can't divide by zero!" << endl;
+    }
+    else{
+        cout << "SOLUTION:" << endl;
+        return x/y;
+    }
 }
 
 double bulkdivision(){
