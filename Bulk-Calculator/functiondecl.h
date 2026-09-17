@@ -11,12 +11,12 @@ void cinfail();
 
 // From math.cpp
 double bulkmultiplication();
-double multiplytwonumbers(double x, double y);
-double multiplywithpi(double x);
-double addition(double x, double y);
+double multiplytwonumbers();
+double multiplywithpi();
+double addition();
 double bulkaddition();
-double subtraction(double x, double y);
+double subtraction();
 double bulksubtraction();
-double division(double x, double y);
+double division();
 double bulkdivision();
 #endif
