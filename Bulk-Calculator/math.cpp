@@ -86,3 +86,41 @@ double bulkaddition(){
         }
     }
 }
+
+double subtraction(double x, double y){
+    cout << "SOLUTION:" << endl;
+    return x-y;
+}
+
+double bulksubtraction(){
+    cout << "How many numbers do you wanna subtract" << endl;
+    int size {};
+    cin >> size;
+    if(size <= 0){
+        cout << "Invalid Input" << endl;
+        return 0.0;
+    }
+    else{
+        double* p = new double[size];
+        for(int i=0;i<size;i++){
+            cout << "Input " << i+1 << " number:" << endl;
+            cin >> p[i];
+        }
+        if(size == 1){
+            double size1 = p[0];
+            delete[] p;
+            p = nullptr;
+            return size1;
+        }
+        else{
+            double subtractoutput { p[0] };
+            for(int i=1;i<size;i++){
+                subtractoutput -= p[i];
+            }
+            delete[] p;
+            p = nullptr;
+            cout << "SOLUTION:" << endl;
+            return subtractoutput;
+        }
+    }
+}
