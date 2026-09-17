@@ -4,6 +4,7 @@
 void welcome();
 void multiplicationsection();
 void additionsection();
+void subtractionsection();
 void goback();
 void cinfail();
 
@@ -13,4 +14,6 @@ double multiplytwonumbers(double x, double y);
 double multiplywithpi(double x);
 double addition(double x, double y);
 double bulkaddition();
+double subtraction(double x, double y);
+double bulksubtraction();
 #endif
