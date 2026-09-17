@@ -87,6 +87,39 @@ int main(){
                 }
             }
             else if(userinput == 3){
+                while (true){
+                    subtractionsection();
+                    int subtractionuserinput {};
+                    cin >> subtractionuserinput;
+                    if(cin.fail()){
+                        cinfail();
+                    }
+                    else{
+                        if(subtractionuserinput == 1){
+                            cout << "Input 1st number:" << endl;
+                            double subtractionnumberx {};
+                            cin >> subtractionnumberx;
+                            cout << "Input 2nd number:" << endl;
+                            double subtractionnumbery {};
+                            cin >> subtractionnumbery;
+                            cout << subtraction(subtractionnumberx,subtractionnumbery) << endl;;
+                            goback();
+                        }
+                        else if(subtractionuserinput == 2){
+                            cout << bulksubtraction() << endl;
+                            goback();
+                        }
+                        else if(subtractionuserinput == 3){
+                            break;
+                        }
+                        else{
+                            cout << "Invalid Input!" << endl;
+                            goback();
+                        }
+                    }
+                }
+            }
+            else if(userinput == 4){
                 break;
             }
             else{
