@@ -8,7 +8,8 @@ void welcome(){
     cout << endl;
     cout << "1. Multiplier" << endl;
     cout << "2. Addition" << endl;
-    cout << "3. Exit" << endl;
+    cout << "3. Subtraction" << endl;
+    cout << "4. Exit" << endl;
     cout << endl;
     cout << "Input: " << endl;
 }
@@ -18,7 +19,7 @@ void multiplicationsection(){
     cout << "   Multiplier    " << endl;
     cout << "=================" << endl;
     cout << endl;
-    cout << "1. Multiply(Add only 2 numbers at a time)" << endl;
+    cout << "1. Multiply(Multiply only 2 numbers at a time)" << endl;
     cout << "2. Multiply number with PI(one number multiply by PI)" << endl;
     cout << "3. Multiply numbers in bulk" << endl;
     cout << "4. Exit" << endl;
@@ -31,8 +32,20 @@ void additionsection(){
     cout << "   ADDITION    " << endl;
     cout << "===============" << endl;
     cout << endl;
-    cout << "1. Addition(Multiply only 2 numbers at a time)" << endl;
+    cout << "1. Addition(Add only 2 numbers at a time)" << endl;
     cout << "2. Add numbers in bulk" << endl;
+    cout << "3. Exit" << endl;
+    cout << endl;
+    cout << "Input: " << endl;
+}
+
+void subtractionsection(){
+    cout << "==================" << endl;
+    cout << "   SUBTRACTION    " << endl;
+    cout << "==================" << endl;
+    cout << endl;
+    cout << "1. Subtraction(Subtract only 2 numbers at a time)" << endl;
+    cout << "2. Subtract numbers in bulk" << endl;
     cout << "3. Exit" << endl;
     cout << endl;
     cout << "Input: " << endl;
