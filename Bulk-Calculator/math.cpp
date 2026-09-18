@@ -221,3 +221,36 @@ double cube(){
     cout << "SOLUTION" << endl;
     return number*number*number;
 }
+
+double exponent(){
+    cout << "Input number:" << endl;
+    double number {};
+    cin >> number;
+    cout << "Input power/exponent:" << endl;
+    int powerorexponent {};
+    cin >> powerorexponent;
+    if(powerorexponent == 0){
+        cout << "SOLUTION:" << endl;
+        return 1;
+    }
+    else if(powerorexponent == 1){
+        cout << "SOLUTION:" << endl;
+        return number;
+    }
+    else if(powerorexponent<0){
+        double intitialinput { number };
+        for(int i=-1;i>powerorexponent;i--){
+            number *= intitialinput;
+        }
+        cout << "SOLUTION:" << endl;
+        return 1/number;
+    }
+    else{
+        double initialinput { number };
+        for(int i=1;i<powerorexponent;i++){
+            number *= initialinput;
+        }
+        cout << "SOLUTION:" << endl;
+        return number;
+    }
+}
