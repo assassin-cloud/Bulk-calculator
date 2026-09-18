@@ -6,6 +6,7 @@ void multiplicationsection();
 void additionsection();
 void subtractionsection();
 void divisonsection();
+void exponentiationsection();
 void goback();
 void cinfail();
 
@@ -19,4 +20,6 @@ double subtraction();
 double bulksubtraction();
 double division();
 double bulkdivision();
+double square();
+double cube();
 #endif
