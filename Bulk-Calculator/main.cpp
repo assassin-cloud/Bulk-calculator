@@ -126,6 +126,27 @@ int main(){
                 }
             }
             else if(userinput == 5){
+                while(true){
+                    exponentiationsection();
+                    int exponentiationuserinput {};
+                    cin >> exponentiationuserinput;
+                    if(cin.fail()){
+                        cinfail();
+                    }
+                    else{
+                        if(exponentiationuserinput == 1){
+                            cout << square() << endl;
+                            goback();
+                        }
+                        else if(exponentiationuserinput == 2){
+                            cout << cube() << endl;
+                            goback();
+                        }
+                        else if(exponentiationuserinput == 3){}
+                    }
+                }
+            }
+            else if(userinput ==6){
                 break;
             }
             else{
