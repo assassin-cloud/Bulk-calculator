@@ -143,6 +143,9 @@ int main(){
                             goback();
                         }
                         else if(exponentiationuserinput == 3){}
+                        else if(exponentiationuserinput == 4){
+                            break;
+                        }
                     }
                 }
             }
