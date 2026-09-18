@@ -10,7 +10,8 @@ void welcome(){
     cout << "2. Addition" << endl;
     cout << "3. Subtraction" << endl;
     cout << "4. Division" << endl;
-    cout << "5. Exit" << endl;
+    cout << "5. Exponentiation" << endl;
+    cout << "6. Exit" << endl;
     cout << endl;
     cout << "Input: " << endl;
 }
@@ -60,6 +61,19 @@ void divisonsection(){
     cout << "1. Divison(Divide only 2 numbers at a time)" << endl;
     cout << "2. Divide numbers in bulk" << endl;
     cout << "3. Exit" << endl;
+    cout << endl;
+    cout << "Input: " << endl;
+}
+
+void exponentiationsection(){
+    cout << "=====================" << endl;
+    cout << "   Exponentiation    " << endl;
+    cout << "=====================" << endl;
+    cout << endl;
+    cout << "1. Square" << endl;
+    cout << "2. Cube" << endl;
+    cout << "3. Exponent" << endl;
+    cout << "4. Exit" << endl;
     cout << endl;
     cout << "Input: " << endl;
 }
