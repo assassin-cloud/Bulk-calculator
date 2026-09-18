@@ -25,9 +25,6 @@ int main(){
                             goback();
                         }
                         else if(multiplieruserinput == 2){
-                            cout << "Input a number" << endl;
-                            double number {};
-                            cin >> number;
                             cout << multiplywithpi() << endl;
                             goback();
                         }
@@ -110,6 +107,7 @@ int main(){
                     else{
                         if(divisonuserinput == 1){
                             cout << division() << endl;
+                            goback();
                         }
                         else if(divisonuserinput == 2){
                             cout << bulkdivision() << endl;
@@ -142,14 +140,21 @@ int main(){
                             cout << cube() << endl;
                             goback();
                         }
-                        else if(exponentiationuserinput == 3){}
+                        else if(exponentiationuserinput == 3){
+                            cout << exponent() << endl;
+                            goback();
+                        }
                         else if(exponentiationuserinput == 4){
                             break;
+                        }
+                        else{
+                            cout << "Invalid Input!" << endl;
+                            goback();
                         }
                     }
                 }
             }
-            else if(userinput ==6){
+            else if(userinput == 6){
                 break;
             }
             else{
