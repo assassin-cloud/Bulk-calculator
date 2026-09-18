@@ -205,3 +205,19 @@ double bulkdivision(){
         }
     }
 }
+
+double square(){
+    cout << "Input number:" << endl;
+    double number {};
+    cin >> number;
+    cout << "SOLUTION" << endl;
+    return number*number;
+}
+
+double cube(){
+    cout << "Input number:" << endl;
+    double number {};
+    cin >> number;
+    cout << "SOLUTION" << endl;
+    return number*number*number;
+}
