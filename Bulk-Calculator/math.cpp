@@ -158,6 +158,7 @@ double division(){
     cin >> y;
     if(y == 0){
         cout << "Can't divide by zero!" << endl;
+        return 0.0;
     }
     else{
         cout << "SOLUTION:" << endl;
@@ -238,17 +239,23 @@ double exponent(){
         return number;
     }
     else if(powerorexponent<0){
-        double intitialinput { number };
-        for(int i=-1;i>powerorexponent;i--){
-            number *= intitialinput;
+        if(number == 0){
+            cout << "Invalid Input!" << endl;
+            return 0.0;
         }
-        cout << "SOLUTION:" << endl;
-        return 1/number;
+        else{
+            double intitialinput { number };
+            for(int i=-1;i>powerorexponent;i--){
+                number *= intitialinput;
+            }
+            cout << "SOLUTION:" << endl;
+            return 1/number;
+        }
     }
     else{
         double initialinput { number };
         for(int i=1;i<powerorexponent;i++){
-            number *= initialinput;
+        number *= initialinput;
         }
         cout << "SOLUTION:" << endl;
         return number;
