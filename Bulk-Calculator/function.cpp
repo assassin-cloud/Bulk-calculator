@@ -53,12 +53,12 @@ void subtractionsection(){
     cout << "Input: " << endl;
 }
 
-void divisonsection(){
+void divisionsection(){
     cout << "===============" << endl;
     cout << "   Division    " << endl;
     cout << "===============" << endl;
     cout << endl;
-    cout << "1. Divison(Divide only 2 numbers at a time)" << endl;
+    cout << "1. Division(Divide only 2 numbers at a time)" << endl;
     cout << "2. Divide numbers in bulk" << endl;
     cout << "3. Exit" << endl;
     cout << endl;
