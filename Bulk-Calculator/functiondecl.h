@@ -5,7 +5,7 @@ void welcome();
 void multiplicationsection();
 void additionsection();
 void subtractionsection();
-void divisonsection();
+void divisionsection();
 void exponentiationsection();
 void goback();
 void cinfail();
