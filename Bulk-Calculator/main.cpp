@@ -98,22 +98,22 @@ int main(){
             }
             else if(userinput == 4){
                 while(true){
-                    divisonsection();
-                    int divisonuserinput {};
-                    cin >> divisonuserinput;
+                    divisionsection();
+                    int divisionuserinput {};
+                    cin >> divisionuserinput;
                     if(cin.fail()){
                         cinfail();
                     }
                     else{
-                        if(divisonuserinput == 1){
+                        if(divisionuserinput == 1){
                             cout << division() << endl;
                             goback();
                         }
-                        else if(divisonuserinput == 2){
+                        else if(divisionuserinput == 2){
                             cout << bulkdivision() << endl;
                             goback();
                         }
-                        else if(divisonuserinput == 3){
+                        else if(divisionuserinput == 3){
                             break;
                         }
                         else{
