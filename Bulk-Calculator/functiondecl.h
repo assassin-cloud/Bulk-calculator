@@ -1,5 +1,8 @@
 #ifndef FUNCTIONDECL
 #define FUNCTIONDECL
+
+extern int userinput;
+
 // From functions.cpp
 double takedoubleinput();
 int takeinputfromuser();
@@ -15,21 +18,21 @@ void cinfail();
 // From math.cpp
 
 // multiplication Section
-double bulkmultiplication();
+void bulkmultiplication();
 double multiplytwonumbers();
 double multiplywithpi();
 
 // Addition Section
 double addition();
-double bulkaddition();
+void bulkaddition();
 
 // Subtraction section
 double subtraction();
-double bulksubtraction();
+void bulksubtraction();
 
 // Division section
 double division();
-double bulkdivision();
+void bulkdivision();
 
 // Exponention section
 double square();
