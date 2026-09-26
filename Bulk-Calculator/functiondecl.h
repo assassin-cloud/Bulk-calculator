@@ -1,6 +1,8 @@
 #ifndef FUNCTIONDECL
 #define FUNCTIONDECL
 // From functions.cpp
+double takedoubleinput();
+int takeinputfromuser();
 void welcome();
 void multiplicationsection();
 void additionsection();
