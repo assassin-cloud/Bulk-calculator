@@ -1,6 +1,18 @@
 #include<iostream>
 using namespace std;
 
+double takedoubleinput(){
+    double x {};
+    cin >> x;
+    return x;
+}
+
+int takeinputfromuser(){
+    int x {};
+    cin >> x;
+    return x;
+}
+
 void welcome(){
     cout << "=====================" << endl;
     cout << "   Bulk Calculator   " << endl;
