@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+int userinput {};
 double takedoubleinput(){
     double x {};
     cin >> x;
