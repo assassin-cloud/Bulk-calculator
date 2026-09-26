@@ -1,13 +1,12 @@
+#include "functiondecl.h"
 #include<iostream>
 using namespace std;
 
 double multiplytwonumbers(){
     cout << "Input 1st number:" << endl;
-    double x {};
-    cin >> x;
+    double x { takedoubleinput() };
     cout << "Input 2nd number:" << endl;
-    double y {};
-    cin >> y;
+    double y { takedoubleinput() };
     cout << endl;
     cout << "SOLUTION:" << endl;
     return x*y;
@@ -15,8 +14,7 @@ double multiplytwonumbers(){
 
 double multiplywithpi(){
     cout << "Input a number" << endl;
-    double number {};
-    cin >> number;
+    double number { takedoubleinput() };
     double pi {3.141592653589793};
     cout << "SOLUTION:" << endl;
     return number*pi;
@@ -24,7 +22,7 @@ double multiplywithpi(){
 
 double bulkmultiplication(){
     cout << "How many numbers do you want to bulk multiply:" << endl;
-    int size {};
+    int size { takeinputfromuser() };
     cin >> size;
     if(size<=0){
         cout << "Invalid Input" << endl;
@@ -47,24 +45,21 @@ double bulkmultiplication(){
             double multiply { p[0] };
             double output {};
             for(int i=1;i<size;i++){
-                output = multiply*p[i];
-                multiply = output;
+                multiply*=p[i];
             }
             delete[] p;
             p = nullptr;
             cout << "SOLUTION:" << endl;
-            return output;
+            return multiply;
         }
     }
 }
 
 double addition(){
     cout << "Input 1st number:" << endl;
-    double x {};
-    cin >> x;
+    double x { takedoubleinput() };
     cout << "Input 2nd number:" << endl;
-    double y {};
-    cin >> y;
+    double y { takedoubleinput() };
     cout << endl;
     cout << "SOLUTION:" << endl;
     return x+y;
@@ -72,8 +67,7 @@ double addition(){
 
 double bulkaddition(){
     cout << "How many numbers do you wanna add:" << endl;
-    int size {};
-    cin >> size;
+    int size { takeinputfromuser() };
     if(size<=0){
         cout << "Invalid Input!" << endl;
         return 0.0;
@@ -84,7 +78,7 @@ double bulkaddition(){
             cout << "Input " << i+1 << " number" << endl;
             cin >> p[i];
         }
-        if(size==1){
+        if(size == 1){
             cout << "SOLUTION:" << endl;
             double size1 { p[0] };
             delete[] p;
@@ -106,11 +100,9 @@ double bulkaddition(){
 
 double subtraction(){
     cout << "Input 1st number:" << endl;
-    double x {};
-    cin >> x;
+    double x { takedoubleinput() };
     cout << "Input 2nd number:" << endl;
-    double y {};
-    cin >> y;
+    double y { takedoubleinput() };
     cout << endl;
     cout << "SOLUTION:" << endl;
     return x-y;
@@ -118,7 +110,7 @@ double subtraction(){
 
 double bulksubtraction(){
     cout << "How many numbers do you wanna subtract" << endl;
-    int size {};
+    int size { takeinputfromuser() };
     cin >> size;
     if(size <= 0){
         cout << "Invalid Input" << endl;
@@ -151,11 +143,9 @@ double bulksubtraction(){
 
 double division(){
     cout << "Enter 1st number:" << endl;
-    double x {};
-    cin >> x;
+    double x { takedoubleinput() };
     cout << "Enter 2nd number:" << endl;
-    double y {};
-    cin >> y;
+    double y { takedoubleinput() };
     if(y == 0){
         cout << "Can't divide by zero!" << endl;
         return 0.0;
@@ -168,8 +158,7 @@ double division(){
 
 double bulkdivision(){
     cout << "How many numbers do you wanna divide:" << endl;
-    int size {};
-    cin >> size;
+    int size { takeinputfromuser() };
     if(size<=0){
         cout << "Invalid Input!" << endl;
         return 0.0;
@@ -209,27 +198,23 @@ double bulkdivision(){
 
 double square(){
     cout << "Input number:" << endl;
-    double number {};
-    cin >> number;
+    double number { takedoubleinput() };
     cout << "SOLUTION" << endl;
     return number*number;
 }
 
 double cube(){
     cout << "Input number:" << endl;
-    double number {};
-    cin >> number;
+    double number { takedoubleinput() };
     cout << "SOLUTION" << endl;
     return number*number*number;
 }
 
 double exponent(){
     cout << "Input number:" << endl;
-    double number {};
-    cin >> number;
+    double number { takedoubleinput() };
     cout << "Input power/exponent:" << endl;
-    int powerorexponent {};
-    cin >> powerorexponent;
+    int powerorexponent { takeinputfromuser() };
     if(powerorexponent == 0){
         cout << "SOLUTION:" << endl;
         return 1;
@@ -244,18 +229,16 @@ double exponent(){
             return 0.0;
         }
         else{
-            double intitialinput { number };
             for(int i=-1;i>powerorexponent;i--){
-                number *= intitialinput;
+                number *= number;
             }
             cout << "SOLUTION:" << endl;
             return 1/number;
         }
     }
     else{
-        double initialinput { number };
         for(int i=1;i<powerorexponent;i++){
-        number *= initialinput;
+        number *= number;
         }
         cout << "SOLUTION:" << endl;
         return number;
