@@ -2,6 +2,68 @@
 #include<iostream>
 using namespace std;
 
+double bulkcalculation(){
+    cout << "How many numbers do you wanna bulk calculate:" << endl;
+    int size { takeinputfromuser() };
+    if(size<=0){
+        cout << "Invalid Input!" << endl;
+    }
+    else{
+        double* p = new double[size];
+        double result {};
+        for(int i=0;i<size;i++){
+            cout << "Input " << i+1 << " number" << endl;
+            cin >> p[i];
+        }
+        if(size == 1){
+            cout << "SOLUTION:" << endl;
+            result = p[0];
+            delete[] p;
+            p = nullptr;
+            return result;
+        }
+        else{
+            if(userinput == 1){
+                result = p[0];
+                for(int i=1;i<size;i++){
+                    result*=p[i];
+                }
+            }
+            else if(userinput == 2){
+                result = p[0];
+                for(int i=1;i<size;i++){
+                    result+=p[i];
+                }
+            }
+            else if(userinput == 3){
+                result = p[0];
+                for(int i=1;i<size;i++){
+                    result -= p[i];
+                }
+            }
+            else if(userinput == 4){
+                result = p[0];
+                for(int i=1;i<size;i++){
+                    if(p[i] == 0){
+                        cout << "Can't divide by zero!" << endl;
+                        delete[] p;
+                        p = nullptr;
+                        return 0.0;
+                    }
+                    else{
+                        result /= p[i];
+                    }
+                }
+            }
+        }
+        delete[] p;
+        p = nullptr;
+        cout << "SOLUTION:" << endl;
+        return result;
+    }
+    return 0.0;
+}
+
 double multiplytwonumbers(){
     cout << "Input 1st number:" << endl;
     double x { takedoubleinput() };
@@ -20,39 +82,8 @@ double multiplywithpi(){
     return number*pi;
 }
 
-double bulkmultiplication(){
-    cout << "How many numbers do you want to bulk multiply:" << endl;
-    int size { takeinputfromuser() };
-    cin >> size;
-    if(size<=0){
-        cout << "Invalid Input" << endl;
-        return 0.0;
-    }
-    else{
-        double* p = new double[size];
-        for(int i=0;i<size;i++){
-            cout << "Input " << i+1 << " number:" << endl;
-            cin >> p[i];
-        }
-        if(size == 1){
-            cout << "SOLUTION" << endl;
-            double size1 = p[0];
-            delete[] p;
-            p = nullptr;
-            return size1;
-        }
-        else{
-            double multiply { p[0] };
-            double output {};
-            for(int i=1;i<size;i++){
-                multiply*=p[i];
-            }
-            delete[] p;
-            p = nullptr;
-            cout << "SOLUTION:" << endl;
-            return multiply;
-        }
-    }
+void bulkmultiplication(){
+    cout << bulkcalculation() << endl;
 }
 
 double addition(){
@@ -65,37 +96,8 @@ double addition(){
     return x+y;
 }
 
-double bulkaddition(){
-    cout << "How many numbers do you wanna add:" << endl;
-    int size { takeinputfromuser() };
-    if(size<=0){
-        cout << "Invalid Input!" << endl;
-        return 0.0;
-    }
-    else{
-        double* p = new double[size];
-        for(int i=0;i<size;i++){
-            cout << "Input " << i+1 << " number" << endl;
-            cin >> p[i];
-        }
-        if(size == 1){
-            cout << "SOLUTION:" << endl;
-            double size1 { p[0] };
-            delete[] p;
-            p = nullptr;
-            return size1;
-        }
-        else{
-            double sum { p[0] };
-            for(int i=1;i<size;i++){
-                sum+=p[i];
-            }
-            cout << "SOLUTION:" << endl;
-            delete[] p;
-            p = nullptr;
-            return sum;
-        }
-    }
+void bulkaddition(){
+    cout << bulkcalculation() << endl;
 }
 
 double subtraction(){
@@ -108,37 +110,8 @@ double subtraction(){
     return x-y;
 }
 
-double bulksubtraction(){
-    cout << "How many numbers do you wanna subtract" << endl;
-    int size { takeinputfromuser() };
-    cin >> size;
-    if(size <= 0){
-        cout << "Invalid Input" << endl;
-        return 0.0;
-    }
-    else{
-        double* p = new double[size];
-        for(int i=0;i<size;i++){
-            cout << "Input " << i+1 << " number:" << endl;
-            cin >> p[i];
-        }
-        if(size == 1){
-            double size1 { p[0] };
-            delete[] p;
-            p = nullptr;
-            return size1;
-        }
-        else{
-            double output { p[0] };
-            for(int i=1;i<size;i++){
-                output -= p[i];
-            }
-            delete[] p;
-            p = nullptr;
-            cout << "SOLUTION:" << endl;
-            return output;
-        }
-    }
+void bulksubtraction(){
+    cout << bulkcalculation();
 }
 
 double division(){
@@ -156,44 +129,8 @@ double division(){
     }
 }
 
-double bulkdivision(){
-    cout << "How many numbers do you wanna divide:" << endl;
-    int size { takeinputfromuser() };
-    if(size<=0){
-        cout << "Invalid Input!" << endl;
-        return 0.0;
-    }
-    else{
-        double* p = new double[size];
-        for(int i=0;i<size;i++){
-            cout << "Input " << i+1 << " number:" << endl;
-            cin >> p[i];
-        }
-        if(size == 1){
-            double size1 { p[0] };
-            delete[] p;
-            p = nullptr;
-            return size1;
-        }
-        else{
-            double output { p[0] };
-            for(int i=1;i<size;i++){
-                if(p[i] == 0){
-                    cout << "Can't divide by zero!" << endl;
-                    delete[] p;
-                    p = nullptr;
-                    return 0.0;
-                }
-                else{
-                    output /= p[i];
-                }
-            }
-            delete[] p;
-            p = nullptr;
-            cout << "SOLUTION:" << endl;
-            return output;
-        }
-    }
+void bulkdivision(){
+    cout << bulkcalculation() << endl;
 }
 
 double square(){
