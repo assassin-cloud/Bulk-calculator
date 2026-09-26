@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     while(true){
         welcome();
-        int userinput { takeinputfromuser() };
+        userinput = takeinputfromuser();
         if(cin.fail()){
             cinfail();
         }
@@ -27,7 +27,7 @@ int main(){
                             goback();
                         }
                         else if(multiplieruserinput == 3){
-                            cout << bulkmultiplication() << endl;
+                            bulkmultiplication();
                             goback();
                         }
                         else if(multiplieruserinput == 4){
@@ -53,7 +53,7 @@ int main(){
                             goback();
                         }
                         else if(additionuserinput == 2){
-                            cout << bulkaddition() << endl;
+                            bulkaddition();
                             goback();
                         }
                         else if(additionuserinput == 3){
@@ -79,7 +79,7 @@ int main(){
                             goback();
                         }
                         else if(subtractionuserinput == 2){
-                            cout << bulksubtraction() << endl;
+                            bulksubtraction();
                             goback();
                         }
                         else if(subtractionuserinput == 3){
@@ -105,7 +105,7 @@ int main(){
                             goback();
                         }
                         else if(divisionuserinput == 2){
-                            cout << bulkdivision() << endl;
+                            bulkdivision();
                             goback();
                         }
                         else if(divisionuserinput == 3){
