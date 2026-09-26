@@ -5,8 +5,7 @@ using namespace std;
 int main(){
     while(true){
         welcome();
-        int userinput {};
-        cin >> userinput;
+        int userinput { takeinputfromuser() };
         if(cin.fail()){
             cinfail();
         }
@@ -14,8 +13,7 @@ int main(){
             if(userinput == 1){
                 while(true){
                     multiplicationsection();
-                    int multiplieruserinput {};
-                    cin >> multiplieruserinput;
+                    int multiplieruserinput { takeinputfromuser() };
                     if(cin.fail()){
                         cinfail();
                     }
@@ -45,8 +43,7 @@ int main(){
             else if(userinput == 2){
                 while(true){
                     additionsection();
-                    int additionuserinput {};
-                    cin >> additionuserinput;
+                    int additionuserinput { takeinputfromuser() };
                     if(cin.fail()){
                         cinfail();
                     }
@@ -72,8 +69,7 @@ int main(){
             else if(userinput == 3){
                 while (true){
                     subtractionsection();
-                    int subtractionuserinput {};
-                    cin >> subtractionuserinput;
+                    int subtractionuserinput { takeinputfromuser() };
                     if(cin.fail()){
                         cinfail();
                     }
@@ -99,8 +95,7 @@ int main(){
             else if(userinput == 4){
                 while(true){
                     divisionsection();
-                    int divisionuserinput {};
-                    cin >> divisionuserinput;
+                    int divisionuserinput { takeinputfromuser() };
                     if(cin.fail()){
                         cinfail();
                     }
@@ -126,8 +121,7 @@ int main(){
             else if(userinput == 5){
                 while(true){
                     exponentiationsection();
-                    int exponentiationuserinput {};
-                    cin >> exponentiationuserinput;
+                    int exponentiationuserinput { takeinputfromuser() };
                     if(cin.fail()){
                         cinfail();
                     }
