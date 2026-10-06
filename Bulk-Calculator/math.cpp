@@ -1,5 +1,6 @@
 #include "functiondecl.h"
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 double bulkcalculation(){
@@ -151,33 +152,7 @@ double exponent(){
     cout << "Input number:" << endl;
     double number { takedoubleinput() };
     cout << "Input power/exponent:" << endl;
-    int powerorexponent { takeinputfromuser() };
-    if(powerorexponent == 0){
-        cout << "SOLUTION:" << endl;
-        return 1;
-    }
-    else if(powerorexponent == 1){
-        cout << "SOLUTION:" << endl;
-        return number;
-    }
-    else if(powerorexponent<0){
-        if(number == 0){
-            cout << "Invalid Input!" << endl;
-            return 0.0;
-        }
-        else{
-            for(int i=-1;i>powerorexponent;i--){
-                number *= number;
-            }
-            cout << "SOLUTION:" << endl;
-            return 1/number;
-        }
-    }
-    else{
-        for(int i=1;i<powerorexponent;i++){
-        number *= number;
-        }
-        cout << "SOLUTION:" << endl;
-        return number;
-    }
+    double powerorexponent { takedoubleinput() };
+    cout << "Solution: ";
+    return pow(number,powerorexponent);
 }
